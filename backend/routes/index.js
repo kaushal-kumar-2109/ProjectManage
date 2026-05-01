@@ -14,8 +14,6 @@ router.post('/register', [
     body('password').isLength({ min: 6 })
 ], authController.register);
 
-router.post('/verify-otp', authController.verifyOtp);
-
 router.post('/login', authController.login);
 router.get('/me', auth, authController.getMe);
 

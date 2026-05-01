@@ -7,10 +7,7 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true },
     role: { type: String, enum: ['Admin', 'Member'], default: 'Member' },
     avatar: { type: String, default: '' },
-    inviteCode: { type: String, unique: true, sparse: true },
-    isVerified: { type: Boolean, default: false },
-    otp: { type: String },
-    otpExpires: { type: Date }
+    inviteCode: { type: String, unique: true, sparse: true }
 }, { timestamps: true });
 
 userSchema.pre('save', async function () {
