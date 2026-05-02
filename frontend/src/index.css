@@ -4,19 +4,19 @@
   --bg-primary: #0a0a0f;
   --bg-secondary: #13131a;
   --bg-tertiary: rgba(255, 255, 255, 0.03);
-  
+
   --accent-primary: #7c3aed;
   --accent-secondary: #4f46e5;
   --accent-gradient: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
-  
+
   --text-primary: #ffffff;
   --text-secondary: #9ca3af;
   --text-tertiary: #6b7280;
 
   --border-color: rgba(255, 255, 255, 0.08);
-  --glass-bg: rgba(19, 19, 26, 0.6);
+  --glass-bg: rgba(19, 19, 26, 0.9);
   --glass-border: 1px solid rgba(255, 255, 255, 0.05);
-  
+
   --status-todo: #6b7280;
   --status-inprogress: #3b82f6;
   --status-review: #f59e0b;
@@ -35,7 +35,7 @@ body {
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
-  background-image: 
+  background-image:
     radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.08), transparent 25%),
     radial-gradient(circle at 85% 30%, rgba(79, 70, 229, 0.08), transparent 25%);
 }
@@ -70,7 +70,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text-primary);
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -179,8 +184,15 @@ p {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
@@ -196,8 +208,28 @@ p {
   font-weight: 500;
 }
 
-.badge-todo { background: rgba(107, 114, 128, 0.15); color: #9ca3af; }
-.badge-inprogress { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
-.badge-review { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
-.badge-done { background: rgba(16, 185, 129, 0.15); color: #34d399; }
-.badge-admin { background: rgba(124, 58, 237, 0.15); color: #a78bfa; border: 1px solid rgba(124, 58, 237, 0.3); }
+.badge-todo {
+  background: rgba(107, 114, 128, 0.15);
+  color: #9ca3af;
+}
+
+.badge-inprogress {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+}
+
+.badge-review {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+.badge-done {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+.badge-admin {
+  background: rgba(124, 58, 237, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}

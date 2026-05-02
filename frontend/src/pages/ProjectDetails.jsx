@@ -182,8 +182,8 @@ const ProjectDetails = () => {
               {/* Status Update Dropdown and View Task */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto', gap: '0.5rem' }}>
                 {task.assignedTo?._id === (user?._id || user?.id) ? (
-                  <select 
-                    value={task.status} 
+                  <select
+                    value={task.status}
                     onChange={(e) => handleStatusChange(task._id, e.target.value)}
                     className="form-control"
                     style={{ padding: '0.4rem', fontSize: '0.85rem', flex: 1 }}
@@ -207,9 +207,9 @@ const ProjectDetails = () => {
       {/* Add Task Modal */}
       {showTaskModal && (
         <div style={{
-          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-          background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)',
-          display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 100
+          position: 'fixed', top: 80, left: 0, right: 0, bottom: 0,
+          background: 'black',
+          display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 9999
         }}>
           <div className="glass-panel animate-fade-in" style={{ width: '100%', maxWidth: '500px', padding: '2rem', maxHeight: '90vh', overflowY: 'auto' }}>
             <h2 style={{ marginBottom: '1.5rem' }}>Add New Task</h2>
@@ -232,7 +232,7 @@ const ProjectDetails = () => {
               </div>
               <div className="form-group">
                 <label className="form-label">Due Date (Last Date)</label>
-                <input 
+                <input
                   type="date" className="form-control"
                   value={newTask.dueDate} onChange={(e) => setNewTask({ ...newTask, dueDate: e.target.value })}
                   required
@@ -273,7 +273,7 @@ const ProjectDetails = () => {
         <div style={{
           position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
           background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)',
-          display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 100
+          display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 9999
         }}>
           <div className="glass-panel animate-fade-in" style={{ width: '100%', maxWidth: '400px', padding: '2rem', maxHeight: '90vh', overflowY: 'auto' }}>
             <h2 style={{ marginBottom: '1.5rem' }}>Invite Member</h2>
